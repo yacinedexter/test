@@ -61,7 +61,7 @@ class Config():
     path_log   = dir_output + "log.txt"
 
     # embeddings
-    dim_word = 300
+    dim_word = 50
     dim_char = 100
 
     # glove files
