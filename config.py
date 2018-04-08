@@ -61,7 +61,7 @@ class Config():
     path_log   = dir_output + "log.txt"
 
     # embeddings
-    dim_word = 50
+    dim_word = 300
     dim_char = 100
 
     # glove files
@@ -97,7 +97,7 @@ class Config():
 
     # model hyperparameters
     hidden_size_char = 100 # lstm on chars
-    hidden_size_lstm = 50 # lstm on word embeddings
+    hidden_size_lstm = 300 # lstm on word embeddings
 
     # NOTE: if both chars and crf, only 1.6x slower on GPU
     use_crf = True # if crf, training is 1.7x slower on CPU
