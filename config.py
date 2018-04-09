@@ -9,11 +9,9 @@ from .data_utils import get_trimmed_glove_vectors, load_vocab, \
 class Config():
     def __init__(self, load=True):
         """Initialize hyperparameters and load vocabs
-
         Args:
             load_embeddings: (bool) if True, load embeddings into
                 np array, else None
-
         """
         # directory for training outputs
         if not os.path.exists(self.dir_output):
@@ -29,11 +27,9 @@ class Config():
 
     def load(self):
         """Loads vocabulary, processing functions and embeddings
-
         Supposes that build_data.py has been run successfully and that
         the corresponding files have been created (vocab and trimmed GloVe
         vectors)
-
         """
         # 1. vocabulary
         self.vocab_words = load_vocab(self.filename_words)
@@ -71,9 +67,9 @@ class Config():
     use_pretrained = True
 
     # dataset
-    filename_dev = "data/coNLL/eng/eng.testa.iob"
-    filename_test = "data/coNLL/eng/eng.testb.iob"
-    filename_train = "data/coNLL/eng/eng.train.iob"
+    # filename_dev = "data/coNLL/eng/eng.testa.iob"
+    # filename_test = "data/coNLL/eng/eng.testb.iob"
+    # filename_train = "data/coNLL/eng/eng.train.iob"
 
     filename_dev = filename_test = filename_train = "data/test.txt" # test
 
@@ -101,4 +97,4 @@ class Config():
 
     # NOTE: if both chars and crf, only 1.6x slower on GPU
     use_crf = True # if crf, training is 1.7x slower on CPU
-    use_chars = True # if char embedding, training is 3.5x slower on CPU
+use_chars = True # if char embedding, training is 3.5x slower on CPU
